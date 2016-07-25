@@ -1,0 +1,75 @@
+$input-height: 3rem !default
+$input-font-size: 1.3em !default
+$input-margin: 0 0 15px 0 !default
+$input-padding: 0 !default
+$input-transition: all 0.5s !default
+$input-border-color: color("grey", "base") !default
+$input-border: 1px solid $input-border-color !default
+$formBorderColor: #8493B6
+
+
+// form styling
+form
+	margin-top: 30px
+
+
+form .btn
+	color: $formBorderColor
+	font-weight: 700
+	font-size: 1.3em
+	margin-top: 30px
+
+
+
+.g-recaptcha
+	margin-top: 20px
+.g-recaptcha div
+	position: relative
+	float: right
+@media (max-width: 600px)
+	.g-recaptcha div
+		margin: 0 auto
+		float: none
+
+
+
+.formMessage
+	margin-top: 60px
+
+
+
+input:not([type]),
+input[type=text],
+input[type=email],
+textarea.materialize-textarea
+	background-color: transparent
+	border: none
+	border-bottom: 1px solid rgba(0,0,0,0.3)
+	border-radius: 0
+	outline: none
+	height: $input-height
+	width: 100%
+	font-size: $input-font-size
+	margin: $input-margin
+	padding: $input-padding
+	box-shadow: none
+	box-sizing: content-box
+	transition: $input-transition
+
+textarea.materialize-textarea
+	padding: .8rem 0
+	min-height: 0
+
+textarea.materialize-textarea
+	width: 100%
+	height: $input-height
+	background-color: transparent
+	overflow-y: hidden
+	resize: none
+
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus
+    border-bottom: 1px solid $formBorderColor
+    box-shadow: 0 1px 0 0 $formBorderColor	
