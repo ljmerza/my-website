@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+	<title>Node Authentication</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style>
+		body{word-wrap:break-word;}
+		h1{font-size: 6em;margin-top: 10%;}
+		.text-center>a{font-size: 5em;margin-bottom: 100px;margin-top:10px;}
+		.well .row .col-xs-7:first-of-type{font-size: 6em;}
+		.well .row .col-xs-5:last-of-type a{font-size: 5em;float:right;padding: 10px 40px 10px 40px;}
+		.well .row:last-of-type{font-size:3em; margin-top: 50px;}
+		.well{margin-bottom: 50px;}
+		@media (min-width: 992px) {
+			h1{font-size: 4em;margin-top: 10%;}
+			.text-center>a{font-size: 2em;margin-bottom: 50px}
+			.well .row .col-xs-7:first-of-type{font-size: 2em;}
+			.well .row .col-xs-5:last-of-type a{font-size: 2em;padding: 5px 10px 5px 10px;}
+			.well .row:last-of-type{font-size:1em; margin-top: 20px;}
+			.well{margin-bottom: 50px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h1><i class="fa fa-cog"> Profile Page</i></h1>
+				<a href="logout" class='btn btn-default btn-lg'>Logout</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="row">
+					<div class="col-xs-12 col-md-4">
+						<div class="well">
+							<div class="row">
+								<div class="col-xs-7"><i class="fa fa-user"></i> Local</div>
+								<div class="col-xs-5">
+									<% if (user.local.email) { %>
+										<a href="unlink/local" class="btn btn-default">Unlink</a>
+									<% } else { %>
+										<a href="connect/local" class="btn btn-default">Connect</a>
+									<% } %>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<% if (user.local.email) { %>
+										<strong>id</strong>: <%= user._id %><br>
+										<strong>email</strong>: <%= user.local.email %><br>
+										<strong>password</strong>: <%= user.local.password %>
+									<% } %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="well">
+							<div class="row">
+								<div class="col-xs-7 text-primary"><i class="fa fa-facebook"></i> Facebook</div>
+								<div class="col-xs-5">
+									<% if (user.facebook.token) { %>
+										<a href="unlink/facebook" class="btn btn-default btn-primary">Unlink</a>
+									<% } else { %>
+										<a href="connect/facebook" class="btn btn-default btn-primary">Connect</a>
+									<% } %>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<% if (user.facebook.token) { %>
+										<strong>id</strong>: <%= user.facebook.id %><br>
+										<strong>token</strong>: <%= user.facebook.token %><br>
+										<strong>name</strong>: <%= user.facebook.name %>
+									<% } %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="well">
+							<div class="row">
+								<div class="col-xs-7 text-info"><i class="fa fa-twitter"></i> Twitter</div>
+								<div class="col-xs-5">
+									<% if (user.twitter.token) { %>
+										<a href="unlink/twitter" class="btn btn-default btn-info">Unlink</a>
+									<% } else { %>
+										<a href="connect/twitter" class="btn btn-default btn-info">Connect</a>
+									<% } %>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<% if (user.twitter.token) { %>
+										<strong>id</strong>: <%= user.twitter.id %><br>
+										<strong>token</strong>: <%= user.twitter.token %><br>
+										<strong>display name</strong>: <%= user.twitter.displayName %><br>
+										<strong>username</strong>: <%= user.twitter.username %>
+									<% } %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-4">
+						<div class="well">
+							<div class="row">
+								<div class="col-xs-7 text-danger"><i class="fa fa-google"></i> Google+</div>
+								<div class="col-xs-5">
+									<% if (user.google.token) { %>
+										<a href="unlink/google" class="btn btn-default btn-danger">Unlink</a>
+									<% } else { %>
+										<a href="connect/google" class="btn btn-default btn-danger">Connect</a>
+									<% } %>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<% if (user.google.token) { %>
+										<strong>id</strong>: <%= user.google.id %><br>
+										<strong>token</strong>: <%= user.google.token %><br>
+										<strong>email</strong>: <%= user.google.email %><br>
+										<strong>name</strong>: <%= user.google.name %>
+									<% } %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="well">
+							<div class="row">
+								<div class="col-xs-7 text-warning"><i class="fa fa-instagram"></i> Instagram</div>
+								<div class="col-xs-5">
+									<% if (user.instagram.token) { %>
+										<a href="unlink/instagram" class="btn btn-default btn-warning">Unlink</a>
+									<% } else { %>
+										<a href="connect/instagram" class="btn btn-default btn-warning">Connect</a>
+									<% } %>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<% if (user.instagram.token) { %>
+										<strong>id</strong>: <%= user.instagram.id %><br>
+										<strong>token</strong>: <%= user.instagram.token %><br>
+										<strong>username</strong>: <%= user.instagram.username %><br>
+										<strong>name</strong>: <%= user.instagram.name %>
+									<% } %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="well">
+							<div class="row">
+								<div class="col-xs-7 text-info"><i class="fa fa-linkedin"></i> Linkedin</div>
+								<div class="col-xs-5">
+									<% if (user.linkedin.token) { %>
+										<a href="unlink/linkedin" class="btn btn-default btn-info">Unlink</a>
+									<% } else { %>
+										<a href="connect/linkedin" class="btn btn-default btn-info">Connect</a>
+									<% } %>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<% if (user.linkedin.token) { %>
+										<strong>id</strong>: <%= user.linkedin.id %><br>
+										<strong>token</strong>: <%= user.linkedin.token %><br>
+										<strong>name</strong>: <%= user.linkedin.name %>
+									<% } %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-4">
+						<div class="well">
+							<div class="row">
+								<div class="col-xs-7 text-success"><i class="fa fa-github"></i> github</div>
+								<div class="col-xs-5">
+									<% if (user.github.token) { %>
+										<a href="unlink/github" class="btn btn-default btn-success">Unlink</a>
+									<% } else { %>
+										<a href="connect/github" class="btn btn-default btn-success">Connect</a>
+									<% } %>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<% if (user.github.token) { %>
+										<strong>id</strong>: <%= user.github.id %><br>
+										<strong>token</strong>: <%= user.github.token %><br>
+										<strong>name</strong>: <%= user.github.name %><br>
+										<strong>login</strong>: <%= user.github.username %><br>
+										<strong>url</strong>: <%= user.github.url %><br>
+										<strong>email</strong>: <%= user.github.email %><br>
+									<% } %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+		equalheight = function(container){
+			var currentTallest = 0,
+		    currentRowStart = 0,
+		    rowDivs = new Array(),
+		    $el,
+		    topPosition = 0;
+			$(container).each(function() {
+				$el = $(this);
+			    $($el).height('auto')
+			    topPostion = $el.position().top;
+
+			    if (currentRowStart != topPostion) {
+			    	for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+			       		rowDivs[currentDiv].height(currentTallest);
+			     	}
+			     	rowDivs.length = 0; // empty the array
+			    	currentRowStart = topPostion;
+			    	currentTallest = $el.height();
+			    	rowDivs.push($el);
+			   	} else {
+			    	rowDivs.push($el);
+			    	currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+			  	}
+			   	for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+			    	rowDivs[currentDiv].height(currentTallest);
+			   	}
+			});
+		}
+
+		$(window).load(function() {
+		  equalheight('.well');
+		});
+		$(window).resize(function(){
+		  equalheight('.well');
+		});
+	</script>
+</body>
+</html>

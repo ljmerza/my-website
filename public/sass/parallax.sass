@@ -1,0 +1,75 @@
+#home
+	height: 100vh
+	overflow: hidden
+	position: relative
+	transition: height 999999s
+	
+.parallax
+	height: 100vh
+	background-image: url(img/header.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	transition: height 999999s
+
+.parallaxMobile
+	display: none
+	height: 100vh
+	top: 0
+	background-image: url(img/header.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-attachment: fixed
+	transition: height 999999s
+
+@media (max-width: 600px)
+	#home > .parallaxMobile
+		display: block
+	#home > .parallax
+		display: none
+
+#parallaxText:before
+	content: ""
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -1
+	background-color: rgba(0,0,0,0.7)
+
+
+
+#parallaxText
+	z-index: 1000
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	padding-top: 50px
+	height: 100vh
+#parallaxText .btn
+	margin-top: -50px
+	border: solid 1px white
+	padding: 0 70px 0 70px
+#parallaxText p
+	line-height: 1.5em
+	text-align: center
+	color: #fff
+	font-size: 1.3em
+#parallaxText h2
+	line-height: 1em
+	font-size: 4em
+	margin-top: 20%
+	text-align: center
+	font-family: 'Roboto Condensed'
+
+@media (min-width:600px)
+	#parallaxText h2
+		margin-top: 15%
+		font-size: 5em
+		text-align: left
+	#parallaxText p
+		text-align: left
+		font-size: 1.5em
+	#parallaxText .btn
+		margin-top: 30%

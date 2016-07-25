@@ -1,0 +1,114 @@
+$navBegin: rgba( 87,106,151,0.6)
+$navEnd: rgba( 10, 28, 68,1)
+$navColor: #1D3262
+
+.nav-mobile
+  display: none
+
+nav
+  position: fixed
+  width: 100%
+  z-index: 10000
+  background-color: $navBegin
+nav ul
+  float: right
+  margin: 0
+  padding: 0
+  transition-duration: 400ms
+nav li
+  display: inline-block
+nav li:last-of-type
+  padding-right: 40px
+nav a
+  display: block
+  padding: 20px 40px 20px 40px
+  text-decoration: none
+  color: white
+  font-size: 1rem
+  text-transform: uppercase
+  font-family: Roboto Condensed, sans-serif
+  font-weight: 700
+
+
+nav a:not([href='#!'])
+  position: relative
+  padding-right: 40px
+  padding-left: 40px
+  transition: 1s
+  text-transform: uppercase
+
+nav a:not([href='#!']):before
+  position: absolute
+  top: 50%
+  left: 0
+  width: 0
+  padding-left: 10px
+  transform: translateY(-50%)
+  transition: font .5s, width 1s, left 1s
+  overflow: hidden
+  font-family: 'Material Icons'
+  font-size: 1.5em
+
+nav a:not([href='#!']):hover,
+nav a:not([href='#!']):hover a:not([href='#!']):before
+  padding-left: 20px
+  padding-right: 20px
+  margin-left: 40px
+
+nav a:not([href='#!']):hover:before
+  left: -20px
+  width: 40px
+  
+@media (min-width: 600px)
+  .homemenu a:before
+    content: "\e88a"
+  .aboutmenu a:before
+    content: "\e8d3"
+  .designmenu a:before
+    content: "\e8ae"
+  .workmenu a:before
+    content: "\e0af "
+  .contactmenu a:before
+    content: "\e0be"
+  .blogmenu a:not([href='#!']):before
+    content: "\e871"
+
+.nav-button
+  display: none
+
+  
+
+@media (max-width: 768px)
+  nav
+    height: 60px
+  nav ul
+    width: 300px
+    height: 100vh
+    transform: translateX(-100%)
+    position: absolute
+    top: 0
+    background-color: white
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19)
+  nav li
+    display: block
+  nav li:first-of-type
+    margin-top: 20px
+  nav a
+    color: $navColor
+  nav a:not([href='#!']):before
+    color: $navColor
+  nav .nav-button
+    display: block
+  .navbar-main
+    transition-duration: 400ms
+    transform: translateX(0%)
+
+
+
+nav .nav-button
+  cursor: pointer
+  padding-top: 7px
+  padding-left: 10px
+nav .nav-button i
+  font-size: 3em
+  color: white
