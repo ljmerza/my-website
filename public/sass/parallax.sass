@@ -21,11 +21,6 @@
 	background-attachment: fixed
 	transition: height 999999s
 
-@media (max-width: 600px)
-	#home > .parallaxMobile
-		display: block
-	#home > .parallax
-		display: none
 
 #parallaxText:before
 	content: ""
@@ -63,7 +58,7 @@
 	text-align: center
 	font-family: 'Roboto Condensed'
 
-@media (min-width:600px)
+@media (min-width:992px)
 	#parallaxText h2
 		margin-top: 15%
 		font-size: 5em
@@ -73,3 +68,8 @@
 		font-size: 1.5em
 	#parallaxText .btn
 		margin-top: 30%
+
+@media (max-width: 992px)
+	.contact-button-home
+		text-align: center
+		margin-top: 100px

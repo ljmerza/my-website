@@ -19,7 +19,7 @@
 <body>
 
   <nav class="z-depth-3">
-    <a href="#!" class="nav-button">
+    <a class="nav-button">
       <i class="material-icons">menu</i>
     </a>
 
@@ -34,21 +34,20 @@
   </nav>
 
   <!--main container-->
-  <div class='page-section' id='home' data-scrollax-parent="true">
-    <div class="parallax" data-scrollax="properties: { 'translateY': '70%' }"></div>
-    <div class="parallaxMobile"></div>
+  <div class='page-section' id='home'>
+    <div class="parallax" data-0="transform: translateY(0%);" data-100p="transform: translateY(40%);"></div>
     <div id="parallaxText">
-    	<div data-scrollax="properties: { 'opacity': 1.5 }">
+    	<div data-0="opacity: 1;" data-80p="opacity: 0;">
 	      <div class="row">
-	        <div class="col s12 m7 offset-m5">
+	        <div class="col m10 offset-m1 l7 offset-l5">
 	          <h2>Full Stack Web Development</h2>
 	        </div>
 	      </div>
 	      <div class="row">
-	        <p class='col s10 offset-s1 m5 offset-m5' >from graphical interfaces for desktop and mobile applications to scalable backend databases and APIs.</p>
+	        <p class='col s8 offset-s2 m8 offset-m2 l5 offset-l5' >from graphical interfaces for desktop and mobile applications to scalable backend databases and APIs.</p>
 	      </div>
 	      <div class="row">
-	        <div class="col s12 m5 offset-m5 contact-button-home">
+	        <div class="col s12 l5 offset-l5 contact-button-home">
 	        	<a href="#contact" class='scrollElement'><button class="btn waves-effect waves-light btn-large transparent z-depth-3">Contact Me</button></a>
 	        </div>
 	      </div>
@@ -64,27 +63,27 @@
     <!--about-->
     <div id="about" class='page-section'>
       <div class="row">
-        <div class="col s12 m6 offset-m3">
+        <div class="col m12 l6 offset-l3">
           <h1 class="center-align">About Me</h1>
-          <div class="col s6 offset-s3"><div class="divider"></div></div>
+          <div class="col m6 offset-m3"><div class="divider"></div></div>
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m10 offset-m1">
+        <div class="col m12 l10 offset-l1">
           <h3>Who I Am</h3>
         </div>
-        <div class="col s11 m8 offset-m2">
+        <div class="col m11 l8 offset-l2">
           <p class='flow-text'>My name is Leonardo Merza and I am an electrical engineer turned software developer.  I began my programming skills as a network administrator designing backend software for database deployment, backup integrity, and security management. I continued my education in various fields of web development and heavily rely on Javascript and Python. Today, my skillset widely ranges from web and mobile applications, Wordpress themes, database integration, and API design.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m10 offset-m1">
+        <div class="col m12 l10 offset-l1">
           <h3>My Services</h3>
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m8 offset-m2" data-0="transform: translateX(-100%);opacity:-2;" data-55p-top="transform: translateX(0%);opacity:1;">
-          <ul class="collection z-depth-1">
+        <div class="col m12 l8 offset-l2">
+          <ul class="collection z-depth-1" data-0="transform: translateX(-50%);opacity:-2;" data-55p-top="transform: translateX(0%);opacity:1;">
             <li class="collection-item avatar">
               <img src="img/html.png" alt="Static Web Pages with HTML5, Css3, and Javascript ES6" class="circle">
               <span class="title">Static Website Design</span>
@@ -94,8 +93,8 @@
         </div>
       </div>
       <div class="row" data-scrollax-parent="offset: 500"> 
-        <div class="col s12 m8 offset-m2" data-0="transform:translateX(100%);opacity:-2;" data-60p-top="transform:translateX(0%);opacity:1;">
-          <ul class="collection z-depth-1">
+        <div class="col m12 l8 offset-l2">
+          <ul class="collection z-depth-1" data-0="transform: translateX(50%);opacity:-2;" data-60p-top="transform: translateX(0%);opacity:1;">
             <li class="collection-item avatar">
               <img src="img/webapp.png" alt="Full Stack Web Applications with API and SQL and NoSQL support" class="circle">
               <span class="title">Single Page Applications</span>
@@ -105,8 +104,8 @@
         </div>
       </div>
       <div class="row" data-scrollax-parent="offset: 500">
-        <div class="col s12 m8 offset-m2" data-0="transform: translateX(-100%);opacity:-2;" data-65p-top="transform: translateX(0%);opacity:1;">
-          <ul class="collection z-depth-1">
+        <div class="col m12 l8 offset-l2">
+          <ul class="collection z-depth-1" data-0="transform: translateX(-50%);opacity:-2;" data-65p-top="transform: translateX(0%);opacity:1;">
             <li class="collection-item avatar">
               <img src="img/mobile.png" alt="Mobile Hybrid Apps for Android, iOS, and Windows Phone" class="circle">
               <span class="title">Android and iOS Hybrid Applications</span>
@@ -116,8 +115,8 @@
         </div>
       </div>
       <div class="row" data-scrollax-parent="offset: 500">
-        <div class="col s12 m8 offset-m2" data-0="transform: translateX(100%);opacity:-2;" data-70p-top="transform: translateX(0%);opacity:1;">
-          <ul class="collection z-depth-1">
+        <div class="col m12 l8 offset-l2">
+          <ul class="collection z-depth-1" data-0="transform: translateX(50%);opacity:-2;" data-70p-top="transform: translateX(0%);opacity:1;">
             <li class="collection-item avatar">
               <img src="img/wp.png" alt="Integrated Content Management System Wordpress" class="circle">
               <span class="title">Content Management Systems</span>
@@ -132,19 +131,19 @@
   <!--design process-->
   <div class="container page-section" id='design'>
     <div class="row">
-      <div class="col s12 m6 offset-m3">
+      <div class="col m12 l6 offset-l3">
         <h1 class="center-align">Design Process</h1>
-        <div class="col s6 offset-s3"><div class="divider"></div></div>
+        <div class="col m6 offset-m3"><div class="divider"></div></div>
       </div>
     </div>
     <div class="row">
-      <h2 class="col s10 offset-s1 m4 offset-m4 center-align">
+      <h2 class="col m10 offset-m1 l4 offset-l4 center-align">
           Each project follows a strict design process of information gathering, prototyping, testing, and deployment into a production environment.
       </h2>
     </div>
 
     <div class="row carder-row">
-      <div class="col s12 m4">
+      <div class="col m12 l4">
         <div class="carder z-depth-1 carder-main-1">
           <div class="carder-img plan"></div>
           <div class="carder-main">
@@ -153,7 +152,7 @@
           </div>
         </div>
       </div>
-      <div class="col s12 m4">
+      <div class="col m12 l4">
         <div class="carder z-depth-1 carder-main-2">
           <div class="carder-img test"></div>
           <div class="carder-main">
@@ -162,7 +161,7 @@
           </div>
         </div>
       </div>
-      <div class="col s12 m4">
+      <div class="col m12 l4">
         <div class="carder z-depth-1 carder-main-3">
           <div class="carder-img deploy"></div>
           <div class="carder-main">
@@ -180,18 +179,18 @@
   <!-- contact section -->
   <div class="container page-section">
     <div class="row" id='contact'> 
-      <div class="col s12 m6 offset-m3">
+      <div class="col m12 l6 offset-l3">
         <h1 class="center-align">Contact Me</h1>
-        <div class="col s6 offset-s3"><div class="divider"></div></div>
+        <div class="col m6 offset-m3"><div class="divider"></div></div>
       </div>
     </div>
     <div class="row">
-      <h2 class="col s10 offset-s1 m4 offset-m4 center-align">
+      <h2 class="col m10 offset-m1 l4 offset-l4 center-align">
         Contact me for more information on how to get started expanding your business.
       </h2>
     </div>
     <div class="row row-form">
-      <div class="col s12 m8 offset-m2">
+      <div class="col m12 l8 offset-l2">
         <form>
           <div class="row">
             <div class="col s12">
@@ -204,11 +203,11 @@
             </div>
           </div>
           <div class="row">
-            <div class="col s12 m8 offset-m4">
+            <div class="col s12 m12 l8 offset-l4">
               <div class="g-recaptcha" data-sitekey="6LdFMyITAAAAALFhI3rZKCPHa_CDIVrG1KdBas0z"></div>
             </div>
-            <div class="col s12 m4 offset-m8">
-              <button type="submit" class="btn btn-large waves-effect waves-light pull-right transparent col s12">Send</button>
+            <div class="col s12 m12 l4 offset-l8">
+              <button type="submit" class="btn btn-large waves-effect waves-light pull-right transparent col s12 z-depth-2">Send</button>
             </div>
             <div class="col s12">
               <h5 class="center-align error red-text text-accent-4 formMessage"></h5>
@@ -246,7 +245,6 @@
   </footer>
   
   <script src='https://www.google.com/recaptcha/api.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -14,10 +14,10 @@ form
 
 
 form .btn
-	color: $formBorderColor
-	font-weight: 700
+	color: white
 	font-size: 1.3em
 	margin-top: 30px
+	background-color: rgba( 10, 28, 68, 1) !important
 
 
 
@@ -26,7 +26,7 @@ form .btn
 .g-recaptcha div
 	position: relative
 	float: right
-@media (max-width: 600px)
+@media (max-width: 992px)
 	.g-recaptcha div
 		margin: 0 auto
 		float: none
@@ -35,7 +35,9 @@ form .btn
 
 .formMessage
 	margin-top: 60px
-
+@media (min-width: 601px)
+    .formMessage
+    	float: right
 
 
 input:not([type]),

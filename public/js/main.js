@@ -29,24 +29,34 @@ $(document).scroll( function () {
 
 
 $(document).ready(function() {
-    // parallal init
-    $.Scrollax()
 
+    // only allow parallax on larger screens
     if(window.innerWidth > 992){
         // skrollr
         var s = skrollr.init()
     }
 
 
-
+    
     // mobile nav toggle
-    $('.nav-button').click(function(){
-        $('nav ul').toggleClass('navbar-main')
-    })
-    $('nav ul a').click(function(){
-        $('nav ul').toggleClass('navbar-main')
+    $('.nav-button').click( function (event) {
+        // stop propagation to body
+        event.stopPropagation()
+        
+        // add click event to document for hiding menu for a click anywhere
+        $(document).click( function () {
+            $('nav ul').removeClass('navbar-main')
+            $(document).unbind()
+        })
+
+        $('nav ul').addClass('navbar-main')
     })
 
+    $('.fixed-action-btn').click( function () {
+        $(this).toggleClass('.active')
+    })
+    
+    
 
 
     // auto resize textareas when adding text
@@ -92,9 +102,9 @@ $(document).ready(function() {
             } else {
                 $('.btn', 'form').html(data.info)
                 $('.error').html('')
-                $('#Email').val('')
-                $('#Name').val('')
-                $('#Message').val('')
+                $('#email').val('')
+                $('#name').val('')
+                $('#message').val('')
             }
         })
         return
