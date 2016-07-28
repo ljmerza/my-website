@@ -26,10 +26,10 @@ app.use(session({
   name: 'socialAuthSessions',
 	secret: 'fghwj3454wegghndf435gtr5h',
 	resave: true,
-	saveUninitialized: true,
-	cookie: {
-		expires: new Date(Date.now() + 24 * 60 * 60 * 1000) // 24 hours
-	}
+  	saveUninitialized: true,
+  	cookie: {
+		maxAge: new Date(Date.now() + 24 * 60 * 60 * 1000) // 24 hours
+  	}
 }))
 
 app.use(passport.initialize())
