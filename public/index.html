@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400|Roboto+Condensed:400" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  
+
 </head>
 <body>
 
@@ -35,26 +35,24 @@
   </nav>
 
   <!--main container-->
-  <div class='page-section' id='home'>
-    <div class="parallax"></div>
+  <section class='page-section' id='home'>
+    <div class="parallax" data-0="transform: translateY(0%);" data-100p="transform: translateY(30%);"></div>
     <div id="parallaxText">
-    	<div data-0="opacity: 1;" data-80p="opacity: 0;">
-	      <div class="row">
-	        <div class="col s12 m10 offset-m1">
-	          <h2 class='center-text'>Web &amp; Mobile App Development</h2>
-	        </div>
-	      </div>
-	      <div class="row">
-	        <p class='col s12 m4 offset-m4 center-text'>professional web and mobile applications, content management systems, and data security.</p>
-	      </div>
-	      <div class="row">
-	        <div class="col s12 l5 offset-l5 contact-button-home">
-	        	<a href="#contact" class='scrollElement'><button class="btn waves-effect waves-light btn-large transparent z-depth-3">Contact Me</button></a>
-	        </div>
+	    <div class="row">
+	      <div class="col s12 m10 offset-m1">
+	        <h2 class='center-text'>Web &amp; Mobile App Development</h2>
 	      </div>
 	    </div>
-    </div>    
-  </div>
+	    <div class="row">
+	      <p class='col s12 m4 offset-m4 center-text'>professional web and mobile applications, content management systems, and data security.</p>
+	    </div>
+	    <div class="row">
+	      <div class="col s12 l5 offset-l5 contact-button-home">
+	        <a href="#contact" class='scrollElement'><button class="btn waves-effect waves-light btn-large transparent z-depth-3">Contact Me</button></a>
+	      </div>
+	    </div>
+    </div>
+  </section>
 
 
 
@@ -96,7 +94,7 @@
         </div>
       </div>
 
-      <div class="row" data-scrollax-parent="offset: 500"> 
+      <div class="row" data-scrollax-parent="offset: 500">
         <div class="col m12 l8 offset-l2">
           <div class="serv-card" data-0="transform: translateX(5%);opacity:-2;" data-58p-top="transform: translateX(0%);opacity:1;">
             <img src="img/webapp.png" alt="Full Stack Web Applications with API and SQL and NoSQL support" class="img-el">
@@ -185,7 +183,7 @@
 
   <!-- contact section -->
   <div class="container page-section">
-    <div class="row" id='contact'> 
+    <div class="row" id='contact'>
       <div class="col m12 l6 offset-l3">
         <h1 class="center-align">Contact Me</h1>
         <div class="col m6 offset-m3"><div class="divider"></div></div>
@@ -221,7 +219,7 @@
             </div>
           </div>
         </form>
-      </div> 
+      </div>
     </div>
   </div>
 
@@ -252,7 +250,7 @@
         © 2016 Copyright Leonardo Merza
     </div>
   </footer>
-  
+
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src="script.js"></script>
 </body>
