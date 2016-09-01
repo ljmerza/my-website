@@ -139,6 +139,7 @@ gulp.task('watch', () => {
     gulp.watch('./public/*.html', ['html'])
     gulp.watch('./public/js/**/*.js', ['javascript'])
     gulp.watch('./public/sass/*.s*ss', ['sass'])
+    gulp.watch('./public/sass/materialize/materialize.scss', ['sass'])
     gulp.watch('./public/img/*.*', ['images'])
 
 })
