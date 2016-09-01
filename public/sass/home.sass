@@ -1,3 +1,8 @@
+$headerColor: #8493B6
+$subHeadColor: #fff
+$btnColor: #fff
+
+
 #home
 	height: 100vh
 	overflow: hidden
@@ -44,27 +49,51 @@
 	height: 100vh
 #parallaxText .btn
 	margin-top: -50px
-	border: solid 1px white
+	color: $btnColor
+	border: solid 1px $btnColor
 	padding: 0 70px 0 70px
 #parallaxText p
 	line-height: 1.5em
 	text-align: center
-	color: #fff
+	color: $subHeadColor
 	font-size: 1.3em
 #parallaxText h2
 	line-height: 1em
 	font-size: 4em
-	margin-top: 20%
+	margin-top: 10%
 	text-align: center
 	font-family: 'Roboto Condensed'
+	color: $headerColor
+
+
+
+
+.side-effect
+	position: relative
+	overflow: hidden
+	top: -201px
+	height: 190px
+	z-index: 1000
+.side-effect:before
+	content: ""
+	position: absolute
+	width: 300%
+	height: 120px
+	bottom: 30%
+	left: -50%
+	transform: rotate(-2deg)
+	background: url('./../img/bg-repeat.jpg')
+	background-repeat: repeat
+
+
+
+
 
 @media (min-width:992px)
 	#parallaxText h2
 		margin-top: 15%
 		font-size: 5em
-		text-align: left
 	#parallaxText p
-		text-align: left
 		font-size: 1.5em
 	#parallaxText .btn
 		margin-top: 30%

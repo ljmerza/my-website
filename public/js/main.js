@@ -2,12 +2,14 @@
  
 
 
+
 var $win = $(window)
 var $cardimg = $('.carder-img')
 var $cardhead = $('.carder-head')
 var $cardtext = $('.carder-text')
 
 $(document).scroll( function () {
+
     if(window.innerWidth > 992){
         if ( $win.scrollTop() + 200 > $('#design').offset().top ) {
             $cardimg.css('height', '290px')
@@ -27,8 +29,35 @@ $(document).scroll( function () {
 })
 
 
+function ServiceCardHeight () {
+    var $servCards = $('.serv-card')
+    var biggestCard = 0
+
+    $servCards.each( function (index, element) {
+        if ( biggestCard < $(element).height() ) {
+            biggestCard = $(element).height()
+        }
+    })
+
+    $servCards.each( function (index, element) {
+        $(element).children('.content-card').css('margin-left', parseInt($(element).children('.img-el').width() + 10)+'px')
+    })
+}
+
+
+
+
+$( window ).resize(function() {
+    ServiceCardHeight()
+})
+
+
+
 
 $(document).ready(function() {
+    ServiceCardHeight()
+
+
 
     // only allow parallax on larger screens
     if(window.innerWidth > 992){
@@ -37,7 +66,12 @@ $(document).ready(function() {
     }
 
 
-    
+
+
+
+
+
+
     // mobile nav toggle
     $('.nav-button').click( function (event) {
         // stop propagation to body
@@ -49,7 +83,7 @@ $(document).ready(function() {
             $(document).unbind()
         })
 
-        $('nav ul').addClass('navbar-main')
+        $('nav ul').toggleClass('navbar-main')
     })
 
     $('.fixed-action-btn').click( function () {
@@ -58,9 +92,13 @@ $(document).ready(function() {
     
     
 
+    
 
     // auto resize textareas when adding text
     autosize($('textarea'))
+
+
+
 
 
 
@@ -81,6 +119,9 @@ $(document).ready(function() {
         }
         return
     })
+
+
+
 
 
 
@@ -112,6 +153,9 @@ $(document).ready(function() {
 
 
 
+
+
+
     // navbar scroll color chaning effect
     var scroll_pos = 0;
     var animation_begin_pos = 0;
@@ -140,4 +184,7 @@ $(document).ready(function() {
              $('nav').animate({ backgroundColor: beginning_color }, 0);
         }
     })   
+
+
+
 })

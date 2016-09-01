@@ -2,8 +2,6 @@ $navBegin: rgba( 87,106,151,0.6)
 $navEnd: rgba( 10, 28, 68,1)
 $navColor: #1D3262
 
-.nav-mobile
-  display: none
 
 nav
   position: fixed
@@ -15,6 +13,7 @@ nav ul
   margin: 0
   padding: 0
   transition-duration: 400ms
+  z-index: 100
 nav li
   display: inline-block
 nav li:last-of-type
@@ -73,10 +72,16 @@ nav a:not([href='#!']):hover:before
   .blogmenu a:not([href='#!']):before
     content: "\e871"
 
-.nav-button
-  display: none
 
-  
+nav .nav-button
+  display: none
+  cursor: pointer
+  padding-top: 7px
+  padding-left: 10px
+nav .nav-button i
+  font-size: 3em
+  color: white
+
 
 @media (max-width: 768px)
   nav
@@ -86,7 +91,7 @@ nav a:not([href='#!']):hover:before
     height: 100vh
     transform: translateX(-100%)
     position: absolute
-    top: 0
+    top: 60px
     background-color: white
     box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19)
   nav li
@@ -97,18 +102,18 @@ nav a:not([href='#!']):hover:before
     color: $navColor
   nav a:not([href='#!']):before
     color: $navColor
+
   nav .nav-button
     display: block
+    margin-left: 10px !important
+    padding-left: 0px !important
+  nav .nav-button:hover
+    margin-left: 10px !important
+    padding-left: 0px !important
+
   .navbar-main
     transition-duration: 400ms
     transform: translateX(0%)
 
 
 
-nav .nav-button
-  cursor: pointer
-  padding-top: 7px
-  padding-left: 10px
-nav .nav-button i
-  font-size: 3em
-  color: white
