@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dev-server.js"
   },
-  "author": "",
+  "author": "Leonardo Merza",
   "license": "ISC",
   "repository": {
     "type": "git",
