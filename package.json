@@ -1,7 +1,7 @@
 {
   "name": "my-server",
-  "version": "1.0.0",
-  "description": "my main server",
+  "version": "1.0.1",
+  "description": "my main server for lmerza.com",
   "main": "server.js",
   "scripts": {
     "start": "node dev-server.js"
