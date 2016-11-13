@@ -1,7 +1,7 @@
 {
   "name": "my-server",
   "version": "1.0.1",
-  "description": "my main server for lmerza.com",
+  "description": "main server for lmerza.com",
   "main": "server.js",
   "scripts": {
     "start": "node dev-server.js"
@@ -47,6 +47,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-debug": "^2.1.2",
+    "gulp-ejs": "^2.2.1",
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
     "gulp-nodemon": "^2.0.7",
