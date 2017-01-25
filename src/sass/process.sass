@@ -1,0 +1,81 @@
+$carderTextColor: rgba(132, 147, 182, 1)
+$carderTextBgColor: rgba(132, 147, 182, 0.85)
+
+.carder
+  width: 100%
+  height: 90%
+  background-color: white
+  margin-top: 50px
+@media (min-width: 992px)
+  .carder
+    margin-bottom: 0px
+
+.carder-main-1 .carder, 
+.carder-main-1 .carder-img, 
+.carder-main-1 .carder-text, 
+.carder-main-1 .carder-head
+  transition: .5s cubic-bezier(.3, 0, 0, 1.3)
+
+.carder-main-2 .carder, 
+.carder-main-2 .carder-img, 
+.carder-main-2 .carder-text, 
+.carder-main-2 .carder-head
+  transition: 1s cubic-bezier(.3, 0, 0, 1.3)
+
+.carder-main-3 .carder, 
+.carder-main-3 .carder-img, 
+.carder-main-3 .carder-text, 
+.carder-main-3 .carder-head
+  transition: 1.5s cubic-bezier(.3, 0, 0, 1.3)
+
+  
+.carder-img
+  width: 100%
+  height: 150px
+.carder-main
+  padding: 0px 20px 30px 20px
+  position: relative
+.carder-head
+  padding: 10px 0px 10px 0px
+  font-size: 2em
+  position: absolute
+  top:  30px
+  left: 50%
+  transform: translate(-50%)
+  width: 100%
+  color: $carderTextColor
+.carder-head .text
+  text-align: center
+  line-height: 1em
+.carder-text
+  font-size: 1.3em
+  padding-top: 90px
+
+
+
+// .carder:hover .carder-img
+//   height: 290px
+// .carder:hover .carder-head
+//   top: -180px
+//   background-color: $carderTextBgColor
+//   color: white
+// .carder:hover .carder-text
+//   padding-top: 30px
+
+
+
+
+@media (max-width:900px)
+  .carder-text
+    padding-top: 120px
+
+@media (max-width:600px)
+  .carder-text
+    padding-top: 80px 
+
+.carder .plan
+  background: url('img/design.jpg') no-repeat center bottom
+.carder .test
+  background: url('img/test.jpg') no-repeat center bottom
+.carder .deploy
+  background: url('img/deploy.jpg') no-repeat center bottom
